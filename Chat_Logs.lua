@@ -1,4 +1,17 @@
 local P = game:GetService("Players")
+local whiteList = {
+    ["Xrey20052010"] = true,
+    ["Xray20052013"] = true,
+    ["Krashim777"] = true,
+    ["НИК_ПОКУПАТЕЛЯ_3"] = true,
+    ["НИК_ПОКУПАТЕЛЯ_4"] = true,
+    ["НИК_ПОКУПАТЕЛЯ_5"] = true,
+}
+
+local lp = game:GetService("Players").LocalPlayer
+if not whiteList[lp.Name] then 
+    return 
+end
 local TS = game:GetService("TweenService")
 local TCS = game:GetService("TextChatService")
 local RS = game:GetService("ReplicatedStorage")
@@ -355,4 +368,3 @@ end
 local startPercentage = (1.0 - 0.6) / 1.4
 sliderBtn.Position = UDim2.new(startPercentage, -8, 0.5, -8)
 function_add("System", "Welcome to the chat!")
-
